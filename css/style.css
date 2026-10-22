@@ -731,6 +731,53 @@ to {
     transform:none
   }
 
+
+  /* Match the artwork's coordinates and breathing motion; feather the sky
+     around Polina's hair instead of cutting effects at a horizontal edge. */
+  .scene1 #stars1,
+  .scene1 .shoot {
+    inset:auto;
+    left:50%;
+    top:50%;
+    width:min(98vw,calc((100vh - var(--safe-top) - var(--safe-bottom)) * .65));
+    width:min(98vw,calc((100dvh - var(--safe-top) - var(--safe-bottom)) * .65));
+    height:auto;
+    aspect-ratio:2 / 3;
+    border-radius:0;
+    background:none;
+    filter:none;
+    opacity:1;
+    transform-origin:center;
+    animation:mobile-art-breathe 28s ease-in-out infinite alternate;
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201536%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22soft%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%2212%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpath%20fill%3D%22white%22%20filter%3D%22url%28%23soft%29%22%20d%3D%22M-50-50H1074V790L780%20790%20600%20775%20550%20740%20530%20695%20515%20650%20495%20605%20460%20575%20410%20565%20350%20570%20300%20590%20265%20625%20245%20675%20225%20730%20190%20775-50%20790Z%22%2F%3E%3C%2Fsvg%3E");
+    mask-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201536%22%3E%3Cdefs%3E%3Cfilter%20id%3D%22soft%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%2212%22%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3Cpath%20fill%3D%22white%22%20filter%3D%22url%28%23soft%29%22%20d%3D%22M-50-50H1074V790L780%20790%20600%20775%20550%20740%20530%20695%20515%20650%20495%20605%20460%20575%20410%20565%20350%20570%20300%20590%20265%20625%20245%20675%20225%20730%20190%20775-50%20790Z%22%2F%3E%3C%2Fsvg%3E");
+    -webkit-mask-size:100% 100%;
+    mask-size:100% 100%;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    pointer-events:none
+  }
+
+  /* Animate the original meteor inside a masked, illustration-sized layer. */
+  .scene1 .shoot::before {
+    content:'';
+    position:absolute;
+    top:16%;
+    left:82%;
+    width:140px;
+    height:8px;
+    border-radius:8px;
+    background:radial-gradient(circle,#fff8f8 0 2px,transparent 4px) right center / 8px 8px no-repeat,
+      linear-gradient(90deg,transparent,#f6a7c5,#fff8f8) center / 100% 2px no-repeat;
+    filter:drop-shadow(0 0 5px #f3abda);
+    transform-origin:right center;
+    animation:meteor 11s linear infinite
+  }
+
+  .scene1 .shoot::after {
+    display:none
+  }
+
   .scene1 .tap-dog {
     left:44%;
     top:58%;
