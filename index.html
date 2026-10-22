@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+  <meta content="#100d24" name="theme-color"/>
+  <title>
+   Созвездие Полины ✦
+  </title>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div id="app">
+   <section aria-label="Полина с собакой смотрят на звёзды" class="scene scene1 active" id="s1">
+    <div class="art-frame">
+     <div class="art">
+     </div>
+     <button aria-label="Погладить собачку" class="tap-dog" id="dog">
+     </button>
+     <div class="glass dog-speech" id="speech">
+      Гав-гав! 🐾 ♡
+     </div>
+    </div>
+    <div class="night">
+    </div>
+    <div class="mist">
+    </div>
+    <div class="twinkles" id="stars1">
+    </div>
+    <div class="shoot">
+    </div>
+    <div class="tail">
+    </div>
+    <button aria-label="Перейти к небу" class="tap-sky" id="sky">
+    </button>
+    <div class="glass hint">
+     <span class="eyebrow">
+      ✧ a little universe ✧
+     </span>
+     <strong>
+      Сегодня небо приготовило сюрприз...
+     </strong>
+     <small>
+      Нажми на небо ✦ или поздоровайся с песелем 🐾
+     </small>
+    </div>
+   </section>
+   <section aria-label="Послание Вселенной" class="scene scene2" id="s2">
+    <div class="galaxy">
+    </div>
+    <div class="twinkles" id="stars2">
+    </div>
+    <div class="glass center-card">
+     <div class="ornament">
+      ✧ ✦ ✧
+     </div>
+     <span class="eyebrow">
+      Incoming message from the universe
+     </span>
+     <h1>
+      Для Полины найдено особенное созвездие
+     </h1>
+     <p>
+      Координаты: где-то среди миллиардов звёзд...
+     </p>
+     <button class="btn" id="explore">
+      Исследовать небо ✦
+     </button>
+    </div>
+   </section>
+   <section aria-label="Созвездие Полины" class="scene scene3" id="s3">
+    <div class="galaxy">
+    </div>
+    <div class="twinkles" id="stars3">
+    </div>
+    <div class="glass instruction">
+     <div class="eyebrow">
+      ✦ star map ✦
+     </div>
+     <h2>
+      Помоги звёздам найти друг друга
+     </h2>
+     <p>
+      Нажимай на самые яркие звёзды по очереди
+     </p>
+     <div class="progress" id="progress">
+      0 / 6 созвездий
+     </div>
+    </div>
+    <svg aria-label="Интерактивная карта звёзд" id="constellation" viewbox="0 0 760 400">
+    </svg>
+    <div class="toast">
+     ✧ Каждое касание создаёт одну букву ✧
+    </div>
+   </section>
+   <div aria-labelledby="congrats" aria-modal="true" class="modal-wrap" id="finish" role="dialog">
+    <div class="glass modal">
+     <div class="ornament">
+      ✦ ✧ ✦
+     </div>
+     <div class="eyebrow">
+      A constellation just for you
+     </div>
+     <h2 id="congrats">
+      Happy Birthday, Polina!
+     </h2>
+     <p>
+      Среди миллиардов звёзд есть одна совершенно особенная.
+     </p>
+     <p class="sub">
+      Пусть сбываются даже самые невероятные мечты. ♡
+     </p>
+     <div class="tiny">
+      WITH LOVE · AMONG THE STARS
+     </div>
+     <button class="btn" id="again" style="margin-top:25px">
+      Посмотреть ещё раз ↺
+     </button>
+    </div>
+   </div>
+  </div>
+  <script defer="True" src="js/main.js">
+  </script>
+ </body>
+</html>
